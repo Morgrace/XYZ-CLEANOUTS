@@ -1,0 +1,65 @@
+@use '../abstracts/variables' as *;
+.cta {
+    grid-column: center-start / center-end;
+
+    display: grid;
+    grid-template-columns: 1fr 50rem;
+    margin-top: -15rem;
+    z-index: 1;
+
+    &__form {
+        padding: 7rem 7rem 5rem;
+        border-radius: 33px;
+        background-color: $color-green-3;
+
+        display: grid;
+        row-gap: 1rem;
+        column-gap: 1.5rem;
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+
+    
+    }
+
+    &__heading{
+        grid-column: 1 / -1;
+    }
+
+    &__input {
+        font-size: 2rem;
+        padding: 1.5rem;
+        border-radius: 5px;
+        border: none;
+        transition: all .2s;
+
+        &:focus {
+            outline: none;
+            
+            &:invalid {
+                border-bottom: 3px solid red;
+            }
+        }
+
+        &::placeholder {
+            font-size: 2rem;
+            color: $color-green-1;
+        }
+    }
+
+    &__contact {
+        padding: 7rem 5rem 5rem;
+        background-color: $color-orange-2;
+        border-radius: 33px;
+
+        span {
+            display: inline-block;
+            font-size: 2.8rem;
+            font-weight: 500;
+            margin: 1rem 0;
+        }
+
+        p {
+            font-size: 2rem;
+            font-weight: 500;
+        }
+    }
+}

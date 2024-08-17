@@ -1,0 +1,47 @@
+@use '../abstracts/variables' as *;
+.about {
+    grid-column: center-start / center-end;
+
+    display: flex;
+    
+    gap: 6rem;
+
+    &__img {
+         img {
+            border-radius: 9px;
+
+         }
+    }
+
+    &__text {
+        font-size: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        p {
+            line-height: 1.5;
+        }
+
+       
+    }
+
+    &__discount {
+        border: 1px solid $color-orange-2;
+        border-radius: 9px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 4rem;
+        padding: 5rem 8rem;
+
+
+        
+        span {
+            color: $color-green-4;
+            display: inline-block;
+            max-width: 35%;
+        }
+    }
+}

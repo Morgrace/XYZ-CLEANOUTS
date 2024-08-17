@@ -1,0 +1,48 @@
+@use '../abstracts/variables' as *;
+
+.heading__primary {
+    font-family: $font-heading;
+    color: $color-white;
+    font-size: 7rem;
+    font-weight: 900;
+}
+
+.heading__secondary {
+    font-family: $font-heading;
+    font-size: 4rem;
+    font-weight: 900;
+
+    &--light {
+        color: $color-white;
+    }
+
+    &--dark {
+        color: $color-black;
+    }
+
+    &--green {
+        color: $color-green-4;
+        font-weight: 700 !important;
+    }
+
+    &--2 {
+        color: $color-orange-1;
+        font-size: 5rem;
+        font-weight: 700;
+    }
+}
+
+.heading__tertiary {
+    font-family: $font-heading;
+    font-size: 2.8rem;
+
+    &--dark {
+    font-weight: 700;
+    color: $color-black;
+    }
+
+    &--green {
+        color: $color-green-4;
+        font-weight: 100;
+    }
+}

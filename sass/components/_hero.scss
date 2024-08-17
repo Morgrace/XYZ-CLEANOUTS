@@ -1,0 +1,31 @@
+@use '../abstracts/variables' as *;
+.hero {
+    grid-column: full-start / full-end;
+    background-image: linear-gradient(rgba($color-black, .3), rgba($color-black, .3)), url('../img/hero.png');
+    background-size: cover;
+    background-position: top;
+    clip-path: polygon(
+        0% 0%, 
+        0% 100%, 
+        40% 92%, 
+        60% 92%, 
+        100% 100%, 
+        100% 0%
+      );
+      display: grid;
+      grid-template-columns: [full-start] 1fr [center-start] repeat(8, [col-start] minmax(min-content, 17rem) [col-end] ) [center-end] 1fr [full-end];
+    //   align-content: center;
+      
+
+     
+
+      &__text-box {
+        grid-column: center-start / 5;
+        margin-top: 10rem;
+      }
+      &__text {
+        color: $color-white;
+        font-size: 2.1rem;
+        font-weight: 500;
+      }
+}

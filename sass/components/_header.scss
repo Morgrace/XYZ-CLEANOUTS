@@ -1,0 +1,82 @@
+@use '../abstracts/variables' as *;
+.header {
+    grid-column: center-start / center-end;
+
+    display: flex;
+    padding: 3rem 0;
+    align-items: center;
+
+    &__logo {
+        margin-right: auto;
+
+        img {
+            max-width: 100%;
+            height: 4.5rem;
+        }
+    }
+
+    &__list {
+        list-style: none;
+        display: flex;
+        
+
+        
+    }
+
+    &__item {
+
+        &:nth-child(4) {
+            border-right: 1px solid rgba($color-black, 0.15);
+        }
+    }
+
+    &__link:link,
+    &__link:visited {
+        text-decoration: none;
+        font-size: 2rem;
+        font-weight: 500;
+        color: $color-black;
+        display: inline-block;
+        padding: 1.25rem;
+        position: relative;
+        transition: all 2s;
+        
+        
+    }
+
+    &__link::before {
+        content: "";
+        display: inline-block;
+        width: 0;
+        height: .1rem;
+        background-color: $color-orange-1;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: all .5s;
+
+    }
+
+    &__link:active {
+        background-color: darken($color-white, 20%);
+    }
+
+    &__link:hover::before {
+        width: 90%;
+    }
+
+    &__link--border {
+        display: flex !important;
+        align-items: center;
+        gap: 1rem;
+    }
+    &__icon {
+        width: 2.5rem;
+        height: 2.5rem;
+        fill: $color-orange-1;
+    }
+    
+
+    
+}

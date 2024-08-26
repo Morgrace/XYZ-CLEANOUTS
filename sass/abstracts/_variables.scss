@@ -17,7 +17,19 @@ $color-copyright: #CFE1CF;
 
 $font-body: 'Source Sans Pro', Arial, Helvetica, sans-serif;
 $font-heading: 'Merriweather', Georgia, 'Times New Roman', serif;
+$font-footer: 'DM Sans', 'Segoe UI', Tahoma, Geneva, sans-serif;
 
+//breakpoints 
+$bp--largest: 87.5em; //1400px
+$bp--large: 75.625em; //1210px
+$bp--medium: 65.625em; //1050px
+$bp--medium-1: 62.5em; //1000px
+$bp--medium-2: 59.375em; //950px
+$bp--medium-3: 54.375em; //870px
+$bp--medium-4: 50.875em; //814px
+$bp--small: 47.125em; //754px
+$bp--smaller: 39.375em; //630px
+$bp--smallest: 31.25em; //500px
 
 //source sans pro body
 //Merriweather headings

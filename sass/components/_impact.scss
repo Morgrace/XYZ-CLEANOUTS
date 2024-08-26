@@ -1,0 +1,37 @@
+@use '../abstracts/variables' as *;
+.impact {
+    grid-column: center-start / center-end;
+    
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 3rem;
+    justify-items: center;
+    padding: 10rem;
+
+    @media only screen and (max-width: $bp--smallest) {
+        grid-column: full-start / full-end;
+        grid-template-columns: unset;
+        row-gap: 4rem;
+    }
+
+
+    h2 {
+        grid-row: 1 / 2;
+        grid-column: 1 / -1;
+    }
+    &__before{
+        justify-self: end;
+    }
+    &__after {
+        grid-column: 2/-1;
+        justify-self: start;
+
+    }
+
+    &__before-img,
+    &__after-img {
+        border-radius: 9px;
+        width: 100%;
+        object-fit: cover;
+    }
+}

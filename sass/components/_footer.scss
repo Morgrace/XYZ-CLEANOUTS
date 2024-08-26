@@ -1,0 +1,107 @@
+@use '../abstracts/variables' as *;
+.footer {
+    grid-column: full-start / full-end;
+    padding: 10rem 10rem 2rem;
+    background-color: $color-green-1;
+
+    display: grid;
+    grid-template-columns: [full-start] 1fr [center-start] repeat(8, [col-start] minmax(min-content, 17rem) [col-end] ) [center-end] 1fr [full-end];
+    justify-content: center;
+    row-gap: 10rem;
+
+    &__contact-container {
+        grid-column: center-start / center-end;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(45rem, 1fr));
+        align-items: center;
+        row-gap: 2rem;
+
+        h1 {
+            justify-self: center;
+        }
+        @media only screen and (max-width: $bp--small) {
+            text-align: center;
+            row-gap: 4rem;
+        }
+    }
+
+    &__contact {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        gap: 1rem;
+
+
+    }
+
+    &__contact-text {
+        font-size: 2rem;
+        color: $color-white;
+        font-weight: 500;
+
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+    }
+
+    &__icon {
+        width: 2.5rem;
+        height: 2.5rem;
+        fill: currentColor;
+    }
+
+    &__contact-tel {
+        font-size: 3.8rem;
+        font-weight: 500;
+        color: $color-orange-1;
+    }
+
+    &__button {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    &__button-text {
+        font-size: 2rem;
+        font-weight: 500;
+        color: $color-white;
+    }
+
+    &__copyright {
+        font-family: $font-footer;
+        font-weight: 400;
+        font-size: 1.6rem;
+        color: $color-copyright;
+        grid-column: center-start / center-end;
+
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    }
+
+    &__follow {
+        justify-self: end;
+    }
+
+    &__follow-link:link,
+    &__follow-link:visited {
+        text-decoration: none;
+        font-size: 1.8rem;
+        color: $color-copyright;
+        font-weight: 700;
+    }
+
+    &__follow-link {
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+    }
+
+    &__follow-icon {
+        width: 2rem;
+        height: 2rem;
+        fill: currentColor;
+
+    }
+}

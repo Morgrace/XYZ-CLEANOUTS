@@ -9,7 +9,14 @@
 }
 
 html {
-    font-size: 62.5%; // 10px
+    font-size: 62.5%; // 1rem = 10px
+
+    @media only screen and (max-width: $bp--large) {
+        font-size: 50%; //1rem = 8px
+    }
+    @media only screen and (max-width: $bp--medium-3) {
+        overflow-x: hidden;
+        }
 
 }
 
@@ -18,4 +25,9 @@ body {
     font-weight: 400;
     font-size: 1.5rem;
     box-sizing: border-box;
+    position: relative;
+    
+    @media only screen and (max-width: $bp--medium-3) {
+    overflow-x: hidden;
+    }
 }

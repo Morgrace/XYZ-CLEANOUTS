@@ -1,31 +1,50 @@
 @use '../abstracts/variables' as *;
+
 .hero {
-    grid-column: full-start / full-end;
+  grid-column: full-start / full-end;
+  background-image: linear-gradient(rgba($color-black, .3), rgba($color-black, .3)), url('../img/hero-0.5x.png');
+  background-size: cover;
+  background-position: center;
+  clip-path: polygon(0% 0%,
+      0% 100%,
+      40% 92%,
+      60% 92%,
+      100% 100%,
+      100% 0%);
+  display: grid;
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 17rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+
+
+  @media only screen and (max-width: $bp--smallest) {
+    grid-template-columns: [full-start] minmax(3rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 17rem) [col-end]) [center-end] minmax(3rem, 1fr) [full-end];
+  }
+
+  @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+  (min-width: 125em) {
     background-image: linear-gradient(rgba($color-black, .3), rgba($color-black, .3)), url('../img/hero.png');
-    background-size: cover;
-    background-position: top;
-    clip-path: polygon(
-        0% 0%, 
-        0% 100%, 
-        40% 92%, 
-        60% 92%, 
-        100% 100%, 
-        100% 0%
-      );
-      display: grid;
-      grid-template-columns: [full-start] 1fr [center-start] repeat(8, [col-start] minmax(min-content, 17rem) [col-end] ) [center-end] 1fr [full-end];
-    //   align-content: center;
-      
+  }
 
-     
 
-      &__text-box {
-        grid-column: center-start / 5;
-        margin-top: 10rem;
+
+
+  &__text-box {
+    grid-column: center-start / 5;
+    margin-top: 10rem;
+
+    @media only screen and (max-width: $bp--smaller) {
+      grid-column: center-start / -1;
+    }
+
+    @media only screen and (max-width: $bp--smallest) {
+      h1 {
+        font-size: 5.5rem;
       }
-      &__text {
-        color: $color-white;
-        font-size: 2.1rem;
-        font-weight: 500;
-      }
+    }
+  }
+
+  &__text {
+    color: $color-white;
+    font-size: 2.1rem;
+    font-weight: 500;
+  }
 }

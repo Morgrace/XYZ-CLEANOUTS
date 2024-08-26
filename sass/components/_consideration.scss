@@ -1,0 +1,54 @@
+@use '../abstracts/variables' as *;
+.consideration {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: min-content 1.2rem repeat(8, min-content);
+    padding: 10rem 0;
+
+    @media only screen and (max-width: $bp--small) {
+        grid-template-columns: unset;
+        grid-template-rows: 1fr 1.2rem repeat(8, 1fr);
+        row-gap: 1rem;
+        padding: 10rem 5rem;
+        &>*:not(span:nth-of-type(1)) {
+            align-self: center;
+        }
+    }
+
+    @media only screen and (max-width: $bp--smallest) {
+        padding: 10rem 0;
+    }
+    
+    span {
+        font-size: 2.2rem;
+        font-weight: 500;
+
+        &:nth-of-type(1) {
+            z-index: 1;
+            width: 125%;
+            background-image: linear-gradient(to right, $color-orange-3 80%, $color-white 20%);
+        }
+        &:nth-of-type(2) {
+            margin-top: 5rem;
+            @media only screen and (max-width: $bp--small) {
+                margin-top: 0;
+            }
+        }
+    }
+
+    
+    figure {
+        grid-column: 2/-1;
+        grid-row: 1/-1;
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+        @media only screen and (max-width: $bp--small) {
+            display: none;
+            // grid-template-columns: unset;
+            // grid-template-rows: unset;
+        }
+    }
+}

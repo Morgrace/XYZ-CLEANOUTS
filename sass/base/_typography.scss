@@ -5,6 +5,10 @@
     color: $color-white;
     font-size: 7rem;
     font-weight: 900;
+
+    &--1 {
+        font-size: 6rem;
+    }
 }
 
 .heading__secondary {
@@ -23,6 +27,11 @@
     &--green {
         color: $color-green-4;
         font-weight: 700 !important;
+    }
+
+    &--dark-green {
+        color: $color-bg;
+        font-weight: 700;
     }
 
     &--2 {

@@ -1,4 +1,5 @@
 @use '../abstracts/variables' as *;
+
 .cta {
     grid-column: center-start / center-end;
 
@@ -7,9 +8,20 @@
     margin-top: -15rem;
     z-index: 1;
 
+    @media only screen and (max-width: $bp--medium-2) {
+        grid-template-columns: 1fr;
+        margin-top: -25rem;
+
+        &>* {
+            border-radius: 0 !important;
+        }
+
+        @media only screen and (max-width: $bp--smaller) {}
+    }
+
     &__form {
         padding: 7rem 7rem 5rem;
-        border-radius: 33px;
+        border-radius: 3rem;
         background-color: $color-green-3;
 
         display: grid;
@@ -17,10 +29,13 @@
         column-gap: 1.5rem;
         grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
 
-    
+        @media only screen and (max-width: $bp--smaller) {
+            padding: 5rem 2rem;
+        }
+
     }
 
-    &__heading{
+    &__heading {
         grid-column: 1 / -1;
     }
 
@@ -33,7 +48,7 @@
 
         &:focus {
             outline: none;
-            
+
             &:invalid {
                 border-bottom: 3px solid red;
             }
@@ -48,7 +63,7 @@
     &__contact {
         padding: 7rem 5rem 5rem;
         background-color: $color-orange-2;
-        border-radius: 33px;
+        border-radius: 3rem;
 
         span {
             display: inline-block;

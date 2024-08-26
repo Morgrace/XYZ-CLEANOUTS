@@ -1,16 +1,25 @@
 @use '../abstracts/variables' as *;
+
 .about {
     grid-column: center-start / center-end;
 
     display: flex;
-    
+
     gap: 6rem;
 
-    &__img {
-         img {
-            border-radius: 9px;
+    @media only screen and (max-width: $bp--medium-1) {
+        flex-direction: column;
+        align-items: center;
+    }
 
-         }
+
+    &__img {
+        border-radius: 9px;
+        width: 100%;
+
+        @media only screen and (max-width: $bp--medium-1) {
+            order: 1;
+        }
     }
 
     &__text {
@@ -19,11 +28,36 @@
         flex-direction: column;
         justify-content: space-between;
 
-        p {
-            line-height: 1.5;
+        @media only screen and (max-width: $bp--medium-1) {
+            width: 70%;
+            text-align: center;
+        }
+        @media only screen and (max-width: $bp--smaller) {
+            width: 100%;
+        
         }
 
-       
+        p {
+            line-height: 1.5;
+
+            @media only screen and (max-width: $bp--largest) {
+                line-height: unset;
+            }
+
+            @media only screen and (max-width: $bp--large) {
+                line-height: 1.5;
+            }
+
+            @media only screen and (max-width: $bp--medium) {
+                line-height: unset;
+            }
+
+            @media only screen and (max-width: $bp--medium-1) {
+                line-height: 1.5;
+            }
+        }
+
+
     }
 
     &__discount {
@@ -36,8 +70,30 @@
         gap: 4rem;
         padding: 5rem 8rem;
 
+        @media only screen and (max-width: $bp--largest) {
+            padding: 2rem;
+            gap: 2rem;
+        }
 
-        
+        @media only screen and (max-width: $bp--large) {
+            padding: 4rem;
+        }
+
+        @media only screen and (max-width: $bp--medium) {
+            padding: 2rem;
+        }
+
+        @media only screen and (max-width: $bp--medium-1) {
+            padding: 5rem 8rem;
+            margin-top: 2rem;
+
+        }
+        @media only screen and (max-width: $bp--smaller) {
+            padding: 2rem;
+        }
+
+
+
         span {
             color: $color-green-4;
             display: inline-block;

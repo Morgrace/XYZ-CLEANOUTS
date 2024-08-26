@@ -7,7 +7,6 @@
     "watch:sass": "sass sass/main.scss css/style.css -w",
     "devserver": "live-server",
     "start": "npm-run-all --parallel watch:sass devserver",
-
     "compile:sass": "sass sass/main.scss css/style.comp.css",
     "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.comp.css -o css/style.prefix.css",
     "compress:css": "sass css/style.prefix.css css/style.css --style compressed",
@@ -16,9 +15,11 @@
   "author": "Morgrace Precious",
   "license": "MIT",
   "devDependencies": {
+    "autoprefixer": "^10.4.20",
     "chokidar": "^3.6.0",
     "live-server": "^1.2.0",
     "micromatch": "^4.0.7",
+    "postcss-cli": "^11.0.0",
     "sass": "^1.77.8",
     "uuid": "^10.0.0"
   },

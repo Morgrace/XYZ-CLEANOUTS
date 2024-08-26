@@ -29,7 +29,7 @@ To run this project locally, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/morgrace/xyz-cleanouts.git
+   git clone https://github.com/Morgrace/XYZ-CLEANOUTS/tree/main
    ```
 2. Navigate to the project directory:
    ```bash
